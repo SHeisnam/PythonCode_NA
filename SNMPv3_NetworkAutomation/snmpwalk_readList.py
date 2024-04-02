@@ -4,6 +4,27 @@ import subprocess
 def get_input(prompt):
     return input(prompt)
 
+# # Path to the input file containing IP addresses
+# print("Enter the input file path containing IP addresses: ")
+# input_file = get_input()
+
+# # Path to the output log file
+# print("Enter the output file where snmpwalk info will be saved: ")
+# output_file = get_input()
+
+# # Prompt the service Account for input
+# print("Enter the Service Account: ")
+# serviceAccount = get_input()
+
+# # Prompt the authentication protocol pass phrase
+# print("Enter the Authentication Password: ")
+# authPassword = get_input()
+
+# # Prompt the privacy protocol pass phrase
+# print("Enter the Privacy Password: ")
+# privPassword = get_input()
+
+
 # Path to the input file containing IP addresses
 print("Enter the input file path containing IP addresses: ")
 input_file = get_input()
@@ -23,6 +44,8 @@ authPassword = get_input()
 # Prompt the privacy protocol pass phrase
 print("Enter the Privacy Password: ")
 privPassword = get_input()
+
+
 
 # Command to execute
 command = f"/opt/OV/bin/nnmsnmpwalk.ovpl -v 3 -v3u {serviceAccount} -a SHA -A '{authPassword}' -x AES256 -X '{privPassword}'"
